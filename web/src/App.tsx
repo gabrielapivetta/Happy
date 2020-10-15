@@ -1,24 +1,14 @@
-import React from 'react';
 // Componentes no React são funções que retornam conteúdo html (JSX)
+// Propriedades (variáveis com um tipo) são feitas através de um interface {} e chamadas na função.
+import React from 'react';
 
-interface TitleProps {
-  text: string;
-}
+import './styles/global.css';
 
-function Title(props: TitleProps){
-  return(
-    <h1>{props.text}</h1>
-  )
-}
+import Routes from './routes';
 
 function App() {
   return (
-    <div className="App">
-      <Title text = "Titulo 1" />
-      <Title text = "Titulo 2" />
-      <Title text = "Titulo 3" />
-      <Title text = "Titulo 4" />
-    </div>
+    <Routes />
   );
 }
 
